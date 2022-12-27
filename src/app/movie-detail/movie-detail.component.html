@@ -1,0 +1,10 @@
+<div *ngIf="movie">
+  <h2>{{movie.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{movie.id}}</div>
+  <div>
+    <label for="movie-name">Movie name: </label>
+    <span>{{movie.name}}</span>
+        
+  <button type="button" (click)="goBack()">return to previous page</button>
+</div>
+
