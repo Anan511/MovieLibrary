@@ -10,6 +10,10 @@ import { MessagesComponent } from './messages/messages.component';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesTableComponent } from './movies-table/movies-table.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -20,13 +24,15 @@ import { MoviesTableComponent } from './movies-table/movies-table.component';
     MoviesComponent,
     MessagesComponent,
     SearchFilterPipe,
-    MoviesTableComponent
+    MoviesTableComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

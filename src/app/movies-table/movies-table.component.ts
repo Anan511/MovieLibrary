@@ -13,23 +13,9 @@ interface Movie {
   styleUrls: ['./movies-table.component.css']
 })
 export class MoviesTableComponent {
-  searchTerm = '';
-  movies: Movie[] = [];
-  allMovies: Movie[] = [];
-
+ 
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
-    debugger;
-    this.http
-      .get<Movie[]>('./db.json')
-      .subscribe((data: Movie[]) => {
-        this.movies = data;
-        this.allMovies = this.movies;
-      });
-  }
-  search(value: string): void {
-    this.movies = this.allMovies.filter((val) =>
-      val.name.toLowerCase().includes(value)
-    );
-  }
+    }
+  
 }
