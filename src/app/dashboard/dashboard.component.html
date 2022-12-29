@@ -1,7 +1,24 @@
 <h2>Top Hollywood Movies</h2>
-<div class="movies-menu">
-  <a *ngFor="let movie of movies"
-     routerLink="/detail/{{movie.id}}">
-    {{movie.name}}
-  </a>
+
+<table id="movies">
+  
+    <tr>
+      <th *ngFor="let col of columns">
+      {{col}}
+      </th>
+      
+    </tr>
+  
+  <tbody>
+    <tr *ngFor="let movie of moviedata | paginate: { itemsPerPage: 5, currentPage: p, totalItems: total }">
+      <td *ngFor="let col of index; let i =index">
+      {{movie[col]}}
+      </td>
+      
+    </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls>
+<div>
+  <router-outlet></router-outlet>
 </div>
