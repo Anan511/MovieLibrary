@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-movie.component.css']
 })
 export class SearchMovieComponent {
-  title = 'Search Movie';
+  //title = 'Search Movie';
   searchText='';
   movies = [
     { id: 11, name: '2009 Avatar', country: 'USA' },
